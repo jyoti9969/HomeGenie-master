@@ -72,10 +72,10 @@ const Details = () => {
                     </Table>
                 </div>
                 <div className='flex justify-between'>
-                    <button className="bg-black hover:bg-blue-300 text-white font-bold py-2 px-4 rounded  mt-4">
+                    <button className="bg-black hover:bg-blue-300 text-white font-bold py-2 px-4 rounded  ">
                         View Phone Number
                     </button>
-                    <button className="bg-white hover:bg-blue-500 text-danger font-bold py-2 px-4 rounded  mt-4">
+                    <button className="bg-white hover:bg-blue-500 text-danger font-bold py-2 px-4 rounded  ">
                         View on Map
                     </button>
                 </div>

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 const PremiumPropertyListings = ({ image, title, location, price, tags }) => {
     return (
+        <>
         <div className="max-w-lg mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
             <img className="w-full h-64 object-cover object-center" src={image} alt={title} />
             <div className="px-6 py-4">
@@ -20,11 +21,13 @@ const PremiumPropertyListings = ({ image, title, location, price, tags }) => {
                         </span>
                     ))}
                 </div>
-                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                    <Link to="/list">View Details</Link>
+                <button className="bg-blue-500 hover:bg-blue-700 font-bold py-2 px-4 rounded">
+                    <Link to="/list" className=" text-white decoration-transparent">View Details</Link>
                 </button>
             </div>
         </div>
+       
+                </>
     );
 };
 

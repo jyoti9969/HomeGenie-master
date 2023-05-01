@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { useLocation } from "react-router-dom";
 import {Link} from 'react-router-dom'
-const Navigation = () => {
+const AdminNavbar = () => {
     const [isOpen, setIsOpen] = React.useState(false);
     const { pathname } = useLocation();
     return (
@@ -17,8 +17,9 @@ const Navigation = () => {
                 
                 {/* <!-- Login and List Your Property --> */}
                 <div className="hidden md:flex items-center">
-                    <Link to="/sign-in" className="text-gray-300 hover:text-white px-3 py-2 decoration-transparent">Login</Link>
-                    <Link to="/admin" className="bg-blue-500 text-white px-4 py-2 rounded-full decoration-transparent">List Your Property</Link>
+                <Link to="/my-list" className="text-gray-300 hover:text-white px-3  decoration-transparent">My-List</Link>
+                    <Link to="/sign-in" className="text-gray-300 hover:text-white   decoration-transparent">Login</Link>
+                    <Link to="/sign-up" className="text-gray-300 hover:text-white   decoration-transparent">/Register</Link>
                 </div>
 
                 {/* <!-- Hamburger Icon for Mobile --> */}
@@ -36,8 +37,9 @@ const Navigation = () => {
             {/* <!-- Mobile Navigation Menu --> */}
             <div className={`${!isOpen ? "hidden" : ""} md:hidden bg-gray-800`}>
                 <div className="px-2 py-3 space-y-1">
-                    <Link to="/sign-in" className="text-white hover:text-gray-300 block px-3 py-2">Login</Link>
-                    <Link to="/admin" className="bg-blue-500 text-white block px-3 py-2 rounded-full">List Your Property</Link>
+                <Link to="#" className="text-white hover:text-gray-300 block px-3 py-2">My-List</Link><br />
+                    <Link to="/sign-in" className="text-white hover:text-gray-300 block px-3 py-2">Login/</Link>
+                    <Link to="/sign-up" className="text-white hover:text-gray-300 block px-3 py-2">Register</Link>
                 </div>
             </div>
         </nav>
@@ -45,4 +47,4 @@ const Navigation = () => {
     );
 }
 
-export default Navigation;
+export default AdminNavbar;

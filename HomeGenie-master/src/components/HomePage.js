@@ -6,6 +6,7 @@ import Properties from './properties/Properties'
 import Advancedsearch from './Advancedsearch'
 import Partner from './Partner'
 import Footer from '../Layouts/Footer'
+import ViewDetail from './properties/ViewDetail'
 
 const HomePage = () => {
   return (
@@ -15,6 +16,7 @@ const HomePage = () => {
           <Advancedsearch />
           <Features />
           <Properties />
+          <ViewDetail />
           <Partner />
           <Footer />
     </Fragment>
