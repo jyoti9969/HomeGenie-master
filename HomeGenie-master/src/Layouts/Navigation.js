@@ -1,5 +1,7 @@
 import React, { Fragment } from 'react';
 import { useLocation } from "react-router-dom";
+import Dashboard from '../components/Dashboard/Dashboard';
+
 import {Link} from 'react-router-dom'
 const Navigation = () => {
     const [isOpen, setIsOpen] = React.useState(false);
@@ -10,7 +12,7 @@ const Navigation = () => {
 
                 {/* <!-- Logo or Name of Website --> */}
                 <div className="flex items-center">
-                    <Link to="#" className="text-white font-bold text-xl decoration-transparent">HomeGenie</Link>
+                    <Link to="/" className="text-white font-bold text-xl decoration-transparent">HomeGenie</Link>
                 </div>
 
                
@@ -18,6 +20,7 @@ const Navigation = () => {
                 {/* <!-- Login and List Your Property --> */}
                 <div className="hidden md:flex items-center">
                     <Link to="/sign-in" className="text-gray-300 hover:text-white px-3 py-2 decoration-transparent">Login</Link>
+                    <Link to="/Dashboard" className="text-gray-300 hover:text-white px-3 py-2 decoration-transparent">Dashboard</Link>
                     <Link to="/admin" className="bg-blue-500 text-white px-4 py-2 rounded-full decoration-transparent">List Your Property</Link>
                 </div>
 
@@ -37,6 +40,7 @@ const Navigation = () => {
             <div className={`${!isOpen ? "hidden" : ""} md:hidden bg-gray-800`}>
                 <div className="px-2 py-3 space-y-1">
                     <Link to="/sign-in" className="text-white hover:text-gray-300 block px-3 py-2">Login</Link>
+                    <Link to="/dashboard" className="text-white hover:text-gray-300 block px-3 py-2">dashboard</Link>
                     <Link to="/admin" className="bg-blue-500 text-white block px-3 py-2 rounded-full">List Your Property</Link>
                 </div>
             </div>

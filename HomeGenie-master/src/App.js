@@ -10,6 +10,7 @@ import MainMenue from "./components/MainMenue";
 import SignIn from "./components/SignIn";
 import SignUp from "./components/SignUp";
 import MyList from "./components/Admin/MyList";
+import Dashboard from "./components/Dashboard/Dashboard";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
          <Route path="/sign-in" element={<SignIn />} />
          <Route path="/sign-up" element={<SignUp />} />
          <Route path="/my-list" element={<MyList />} />
+         <Route path="/Dashboard" element={<Dashboard />} />
       </Routes>
     </Router>
 
